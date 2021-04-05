@@ -3,6 +3,7 @@ package io.weidongxu.webapp.textnormalization;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.io.CloseShieldInputStream;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,11 @@ import java.io.InputStream;
 
 @RestController
 public class RestEndpoint {
+
+    @GetMapping
+    String get() {
+        return "running";
+    }
 
     @PostMapping(
             value = "/",
